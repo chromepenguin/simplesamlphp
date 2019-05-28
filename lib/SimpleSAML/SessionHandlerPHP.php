@@ -13,6 +13,7 @@ namespace SimpleSAML;
 
 use SimpleSAML\Error;
 use SimpleSAML\Utils;
+use Webmozart\Assert\Assert;
 
 class SessionHandlerPHP extends SessionHandler
 {
@@ -238,7 +239,7 @@ class SessionHandlerPHP extends SessionHandler
      */
     public function loadSession($sessionId = null)
     {
-        assert(is_string($sessionId) || $sessionId === null);
+        Assert::nullOrString($sessionId);
 
         if ($sessionId !== null) {
             if (session_id() === '') {
@@ -262,7 +263,7 @@ class SessionHandlerPHP extends SessionHandler
         }
 
         $session = $_SESSION['SimpleSAMLphp_SESSION'];
-        assert(is_string($session));
+        Assert::string($session);
 
         $session = unserialize($session);
 
