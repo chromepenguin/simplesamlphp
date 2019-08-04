@@ -4,6 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+<<<<<<< HEAD
     "content-hash": "4d188ebe69a1f4f1eee30bf48b36d32c",
     "packages": [
         {
@@ -18,6 +19,22 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/oscarotero/Gettext/zipball/70c6ff2fecd275e6ef9cdd542f55939a3d1904d6",
                 "reference": "70c6ff2fecd275e6ef9cdd542f55939a3d1904d6",
+=======
+    "content-hash": "98acca2eaa9fb55266529a31de6b742c",
+    "packages": [
+        {
+            "name": "gettext/gettext",
+            "version": "v4.6.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oscarotero/Gettext.git",
+                "reference": "93176b272d61fb58a9767be71c50d19149cb1e48"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/oscarotero/Gettext/zipball/93176b272d61fb58a9767be71c50d19149cb1e48",
+                "reference": "93176b272d61fb58a9767be71c50d19149cb1e48",
+>>>>>>> Restore lock-file
                 "shasum": ""
             },
             "require": {
@@ -51,9 +68,15 @@
             "authors": [
                 {
                     "name": "Oscar Otero",
+<<<<<<< HEAD
                     "role": "Developer",
                     "email": "oom@oscarotero.com",
                     "homepage": "http://oscarotero.com"
+=======
+                    "email": "oom@oscarotero.com",
+                    "homepage": "http://oscarotero.com",
+                    "role": "Developer"
+>>>>>>> Restore lock-file
                 }
             ],
             "description": "PHP gettext manager",
@@ -66,7 +89,11 @@
                 "po",
                 "translation"
             ],
+<<<<<<< HEAD
             "time": "2019-07-15T12:56:31+00:00"
+=======
+            "time": "2019-01-12T18:40:56+00:00"
+>>>>>>> Restore lock-file
         },
         {
             "name": "gettext/languages",
@@ -105,8 +132,13 @@
             "authors": [
                 {
                     "name": "Michele Locati",
+<<<<<<< HEAD
                     "role": "Developer",
                     "email": "mlocati@gmail.com"
+=======
+                    "email": "mlocati@gmail.com",
+                    "role": "Developer"
+>>>>>>> Restore lock-file
                 }
             ],
             "description": "gettext languages with plural rules",
@@ -217,6 +249,7 @@
             "authors": [
                 {
                     "name": "Georges.L",
+<<<<<<< HEAD
                     "role": "Maintainer",
                     "email": "contact@geolim4.com",
                     "homepage": "https://github.com/Geolim4"
@@ -232,6 +265,23 @@
                     "role": "Former Developer",
                     "email": "amoore@basho.com",
                     "homepage": "https://github.com/alexmoore"
+=======
+                    "email": "contact@geolim4.com",
+                    "homepage": "https://github.com/Geolim4",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Christopher Mancini",
+                    "email": "cmancini@basho.com",
+                    "homepage": "https://github.com/christophermancini",
+                    "role": "Former Lead Developer"
+                },
+                {
+                    "name": "Alex Moore",
+                    "email": "amoore@basho.com",
+                    "homepage": "https://github.com/alexmoore",
+                    "role": "Former Developer"
+>>>>>>> Restore lock-file
                 }
             ],
             "description": "Riak client for PHP (Fork of the official basho/riak due to maintainer significant inactivity)",
@@ -541,6 +591,7 @@
         },
         {
             "name": "simplesamlphp/simplesamlphp-module-adfs",
+<<<<<<< HEAD
             "version": "v0.9.3",
             "source": {
                 "type": "git",
@@ -551,6 +602,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/simplesamlphp/simplesamlphp-module-adfs/zipball/516e16951af459a52eb6d393e87fe44af95278bb",
                 "reference": "516e16951af459a52eb6d393e87fe44af95278bb",
+=======
+            "version": "v0.9.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/simplesamlphp/simplesamlphp-module-adfs.git",
+                "reference": "8b20514d543699ea47dca70c7048477f20a81c15"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/simplesamlphp/simplesamlphp-module-adfs/zipball/8b20514d543699ea47dca70c7048477f20a81c15",
+                "reference": "8b20514d543699ea47dca70c7048477f20a81c15",
+>>>>>>> Restore lock-file
                 "shasum": ""
             },
             "require": {
@@ -582,7 +645,11 @@
                 "adfs",
                 "simplesamlphp"
             ],
+<<<<<<< HEAD
             "time": "2019-08-29T20:40:06+00:00"
+=======
+            "time": "2019-06-03T19:38:15+00:00"
+>>>>>>> Restore lock-file
         },
         {
             "name": "simplesamlphp/simplesamlphp-module-authcrypt",
@@ -1025,6 +1092,7 @@
         },
         {
             "name": "simplesamlphp/simplesamlphp-module-consent",
+<<<<<<< HEAD
             "version": "v0.9.2",
             "source": {
                 "type": "git",
@@ -1035,6 +1103,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/simplesamlphp/simplesamlphp-module-consent/zipball/adbfee34a06e4dec7a04340943b8f87c2a9c5d3a",
                 "reference": "adbfee34a06e4dec7a04340943b8f87c2a9c5d3a",
+=======
+            "version": "v0.9.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/simplesamlphp/simplesamlphp-module-consent.git",
+                "reference": "1006873b077d861ecf6c61f34fc129ac7799ea95"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/simplesamlphp/simplesamlphp-module-consent/zipball/1006873b077d861ecf6c61f34fc129ac7799ea95",
+                "reference": "1006873b077d861ecf6c61f34fc129ac7799ea95",
+>>>>>>> Restore lock-file
                 "shasum": ""
             },
             "require": {
@@ -1066,7 +1146,11 @@
                 "consent",
                 "simplesamlphp"
             ],
+<<<<<<< HEAD
             "time": "2019-08-29T13:59:49+00:00"
+=======
+            "time": "2019-06-03T19:56:39+00:00"
+>>>>>>> Restore lock-file
         },
         {
             "name": "simplesamlphp/simplesamlphp-module-consentadmin",
@@ -1355,6 +1439,7 @@
         },
         {
             "name": "simplesamlphp/simplesamlphp-module-memcookie",
+<<<<<<< HEAD
             "version": "v1.2.2",
             "source": {
                 "type": "git",
@@ -1375,6 +1460,26 @@
                 "phpunit/phpunit": "~5.7",
                 "simplesamlphp/simplesamlphp": "^1.17",
                 "simplesamlphp/simplesamlphp-test-framework": "^0.0.6"
+=======
+            "version": "v1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/simplesamlphp/simplesamlphp-module-memcookie.git",
+                "reference": "f21e70948b020952a4786d6afa56686a5500d6fd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/simplesamlphp/simplesamlphp-module-memcookie/zipball/f21e70948b020952a4786d6afa56686a5500d6fd",
+                "reference": "f21e70948b020952a4786d6afa56686a5500d6fd",
+                "shasum": ""
+            },
+            "require": {
+                "simplesamlphp/composer-module-installer": ">=1.1.6"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.8.36",
+                "simplesamlphp/simplesamlphp": "^1.17"
+>>>>>>> Restore lock-file
             },
             "type": "simplesamlphp-module",
             "notification-url": "https://packagist.org/downloads/",
@@ -1399,7 +1504,11 @@
                 "cookies",
                 "simplesamlphp"
             ],
+<<<<<<< HEAD
             "time": "2019-08-08T18:33:47+00:00"
+=======
+            "time": "2019-03-09T14:04:06+00:00"
+>>>>>>> Restore lock-file
         },
         {
             "name": "simplesamlphp/simplesamlphp-module-metarefresh",
@@ -1448,6 +1557,7 @@
         },
         {
             "name": "simplesamlphp/simplesamlphp-module-negotiate",
+<<<<<<< HEAD
             "version": "v0.9.2",
             "source": {
                 "type": "git",
@@ -1461,6 +1571,22 @@
                 "shasum": ""
             },
             "require": {
+=======
+            "version": "v0.9.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/simplesamlphp/simplesamlphp-module-negotiate.git",
+                "reference": "d0ba794b3c51be26b01db2ad38b20d1f6af2bbf2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/simplesamlphp/simplesamlphp-module-negotiate/zipball/d0ba794b3c51be26b01db2ad38b20d1f6af2bbf2",
+                "reference": "d0ba794b3c51be26b01db2ad38b20d1f6af2bbf2",
+                "shasum": ""
+            },
+            "require": {
+                "ext-krb5": "*",
+>>>>>>> Restore lock-file
                 "php": ">=5.6",
                 "simplesamlphp/composer-module-installer": "~1.1",
                 "simplesamlphp/simplesamlphp-module-ldap": "^0.9",
@@ -1491,7 +1617,11 @@
                 "negotiate",
                 "simplesamlphp"
             ],
+<<<<<<< HEAD
             "time": "2019-08-27T10:09:17+00:00"
+=======
+            "time": "2019-07-01T20:38:23+00:00"
+>>>>>>> Restore lock-file
         },
         {
             "name": "simplesamlphp/simplesamlphp-module-oauth",
@@ -1585,6 +1715,7 @@
         },
         {
             "name": "simplesamlphp/simplesamlphp-module-radius",
+<<<<<<< HEAD
             "version": "v0.9.2",
             "source": {
                 "type": "git",
@@ -1595,6 +1726,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/simplesamlphp/simplesamlphp-module-radius/zipball/aabca2c4d3e47c08d28571bbee1fa791abdd12d1",
                 "reference": "aabca2c4d3e47c08d28571bbee1fa791abdd12d1",
+=======
+            "version": "v0.9.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/simplesamlphp/simplesamlphp-module-radius.git",
+                "reference": "65d48a7accda325822a279c704d2ea40dadb9962"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/simplesamlphp/simplesamlphp-module-radius/zipball/65d48a7accda325822a279c704d2ea40dadb9962",
+                "reference": "65d48a7accda325822a279c704d2ea40dadb9962",
+>>>>>>> Restore lock-file
                 "shasum": ""
             },
             "require": {
@@ -1603,8 +1746,12 @@
             },
             "require-dev": {
                 "phpunit/phpunit": "~5.7",
+<<<<<<< HEAD
                 "simplesamlphp/simplesamlphp": "^1.17",
                 "simplesamlphp/simplesamlphp-test-framework": "^0.0.7"
+=======
+                "simplesamlphp/simplesamlphp": "^1.17"
+>>>>>>> Restore lock-file
             },
             "type": "simplesamlphp-module",
             "autoload": {
@@ -1627,7 +1774,11 @@
                 "radius",
                 "simplesamlphp"
             ],
+<<<<<<< HEAD
             "time": "2019-08-10T14:23:25+00:00"
+=======
+            "time": "2019-06-03T19:33:41+00:00"
+>>>>>>> Restore lock-file
         },
         {
             "name": "simplesamlphp/simplesamlphp-module-riak",
@@ -1814,6 +1965,7 @@
         },
         {
             "name": "simplesamlphp/simplesamlphp-module-statistics",
+<<<<<<< HEAD
             "version": "v0.9.1",
             "source": {
                 "type": "git",
@@ -1824,6 +1976,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/simplesamlphp/simplesamlphp-module-statistics/zipball/9043be4dfa66c572272638ab8306ab48c166d4d2",
                 "reference": "9043be4dfa66c572272638ab8306ab48c166d4d2",
+=======
+            "version": "v0.9.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/simplesamlphp/simplesamlphp-module-statistics.git",
+                "reference": "b2af4cf3b8aef5da2123f191ab0c4f4f5103f6d7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/simplesamlphp/simplesamlphp-module-statistics/zipball/b2af4cf3b8aef5da2123f191ab0c4f4f5103f6d7",
+                "reference": "b2af4cf3b8aef5da2123f191ab0c4f4f5103f6d7",
+>>>>>>> Restore lock-file
                 "shasum": ""
             },
             "require": {
@@ -1855,7 +2019,11 @@
                 "simplesamlphp",
                 "statistics"
             ],
+<<<<<<< HEAD
             "time": "2019-08-26T14:58:20+00:00"
+=======
+            "time": "2019-06-03T08:46:29+00:00"
+>>>>>>> Restore lock-file
         },
         {
             "name": "simplesamlphp/twig-configurable-i18n",
@@ -1907,6 +2075,7 @@
         },
         {
             "name": "symfony/config",
+<<<<<<< HEAD
             "version": "v3.4.31",
             "source": {
                 "type": "git",
@@ -1917,6 +2086,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/config/zipball/24a60c0d7ad98a0fa5d1f892e9286095a389404f",
                 "reference": "24a60c0d7ad98a0fa5d1f892e9286095a389404f",
+=======
+            "version": "v3.4.29",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/config.git",
+                "reference": "29a33f66194fbe2ed4555981810f15fd8440e4a8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/config/zipball/29a33f66194fbe2ed4555981810f15fd8440e4a8",
+                "reference": "29a33f66194fbe2ed4555981810f15fd8440e4a8",
+>>>>>>> Restore lock-file
                 "shasum": ""
             },
             "require": {
@@ -1967,6 +2148,7 @@
             ],
             "description": "Symfony Config Component",
             "homepage": "https://symfony.com",
+<<<<<<< HEAD
             "time": "2019-08-26T07:52:57+00:00"
         },
         {
@@ -1981,6 +2163,22 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/debug/zipball/0b600300918780001e2821db77bc28b677794486",
                 "reference": "0b600300918780001e2821db77bc28b677794486",
+=======
+            "time": "2019-05-30T15:47:52+00:00"
+        },
+        {
+            "name": "symfony/debug",
+            "version": "v3.4.29",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/debug.git",
+                "reference": "1172dc1abe44dfadd162239153818b074e6e53bf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/debug/zipball/1172dc1abe44dfadd162239153818b074e6e53bf",
+                "reference": "1172dc1abe44dfadd162239153818b074e6e53bf",
+>>>>>>> Restore lock-file
                 "shasum": ""
             },
             "require": {
@@ -2023,6 +2221,7 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
+<<<<<<< HEAD
             "time": "2019-08-20T13:31:17+00:00"
         },
         {
@@ -2037,6 +2236,22 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/2709bc2978ceb90f5180181f777f8a09125f2d89",
                 "reference": "2709bc2978ceb90f5180181f777f8a09125f2d89",
+=======
+            "time": "2019-06-18T21:26:03+00:00"
+        },
+        {
+            "name": "symfony/dependency-injection",
+            "version": "v3.4.29",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/dependency-injection.git",
+                "reference": "76857ce235ba1866b66a1d5be34c6794c8895435"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/76857ce235ba1866b66a1d5be34c6794c8895435",
+                "reference": "76857ce235ba1866b66a1d5be34c6794c8895435",
+>>>>>>> Restore lock-file
                 "shasum": ""
             },
             "require": {
@@ -2094,6 +2309,7 @@
             ],
             "description": "Symfony DependencyInjection Component",
             "homepage": "https://symfony.com",
+<<<<<<< HEAD
             "time": "2019-08-26T16:07:57+00:00"
         },
         {
@@ -2108,6 +2324,22 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/3e922c4c3430b9de624e8a285dada5e61e230959",
                 "reference": "3e922c4c3430b9de624e8a285dada5e61e230959",
+=======
+            "time": "2019-05-30T15:47:52+00:00"
+        },
+        {
+            "name": "symfony/event-dispatcher",
+            "version": "v3.4.29",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/event-dispatcher.git",
+                "reference": "f18fdd6cc7006441865e698420cee26bac94741f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/f18fdd6cc7006441865e698420cee26bac94741f",
+                "reference": "f18fdd6cc7006441865e698420cee26bac94741f",
+>>>>>>> Restore lock-file
                 "shasum": ""
             },
             "require": {
@@ -2157,6 +2389,7 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
+<<<<<<< HEAD
             "time": "2019-08-23T08:05:57+00:00"
         },
         {
@@ -2171,6 +2404,22 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/filesystem/zipball/00e3a6ddd723b8bcfe4f2a1b6f82b98eeeb51516",
                 "reference": "00e3a6ddd723b8bcfe4f2a1b6f82b98eeeb51516",
+=======
+            "time": "2019-06-25T07:45:31+00:00"
+        },
+        {
+            "name": "symfony/filesystem",
+            "version": "v3.4.29",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/filesystem.git",
+                "reference": "70adda061ef83bb7def63a17953dc41f203308a7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/70adda061ef83bb7def63a17953dc41f203308a7",
+                "reference": "70adda061ef83bb7def63a17953dc41f203308a7",
+>>>>>>> Restore lock-file
                 "shasum": ""
             },
             "require": {
@@ -2207,6 +2456,7 @@
             ],
             "description": "Symfony Filesystem Component",
             "homepage": "https://symfony.com",
+<<<<<<< HEAD
             "time": "2019-08-20T13:31:17+00:00"
         },
         {
@@ -2221,6 +2471,22 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/http-foundation/zipball/b3d57a1c325f39f703b249bed7998ce8c64236b4",
                 "reference": "b3d57a1c325f39f703b249bed7998ce8c64236b4",
+=======
+            "time": "2019-06-23T09:29:17+00:00"
+        },
+        {
+            "name": "symfony/http-foundation",
+            "version": "v3.4.29",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/http-foundation.git",
+                "reference": "8cfbf75bb3a72963b12c513a73e9247891df24f8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/8cfbf75bb3a72963b12c513a73e9247891df24f8",
+                "reference": "8cfbf75bb3a72963b12c513a73e9247891df24f8",
+>>>>>>> Restore lock-file
                 "shasum": ""
             },
             "require": {
@@ -2261,6 +2527,7 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "https://symfony.com",
+<<<<<<< HEAD
             "time": "2019-08-26T07:50:50+00:00"
         },
         {
@@ -2275,6 +2542,22 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/http-kernel/zipball/f6d35bb306b26812df007525f5757a8b0e95857e",
                 "reference": "f6d35bb306b26812df007525f5757a8b0e95857e",
+=======
+            "time": "2019-06-22T20:10:25+00:00"
+        },
+        {
+            "name": "symfony/http-kernel",
+            "version": "v3.4.29",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/http-kernel.git",
+                "reference": "abbb38dbab652ddc40a86d0c3b0e14ca52d58ed2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/abbb38dbab652ddc40a86d0c3b0e14ca52d58ed2",
+                "reference": "abbb38dbab652ddc40a86d0c3b0e14ca52d58ed2",
+>>>>>>> Restore lock-file
                 "shasum": ""
             },
             "require": {
@@ -2350,6 +2633,7 @@
             ],
             "description": "Symfony HttpKernel Component",
             "homepage": "https://symfony.com",
+<<<<<<< HEAD
             "time": "2019-08-26T16:36:29+00:00"
         },
         {
@@ -2364,6 +2648,22 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/550ebaac289296ce228a706d0867afc34687e3f4",
                 "reference": "550ebaac289296ce228a706d0867afc34687e3f4",
+=======
+            "time": "2019-06-26T13:56:39+00:00"
+        },
+        {
+            "name": "symfony/polyfill-ctype",
+            "version": "v1.11.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-ctype.git",
+                "reference": "82ebae02209c21113908c229e9883c419720738a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/82ebae02209c21113908c229e9883c419720738a",
+                "reference": "82ebae02209c21113908c229e9883c419720738a",
+>>>>>>> Restore lock-file
                 "shasum": ""
             },
             "require": {
@@ -2375,7 +2675,11 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
+<<<<<<< HEAD
                     "dev-master": "1.12-dev"
+=======
+                    "dev-master": "1.11-dev"
+>>>>>>> Restore lock-file
                 }
             },
             "autoload": {
@@ -2392,12 +2696,21 @@
             ],
             "authors": [
                 {
+<<<<<<< HEAD
                     "name": "Gert de Pagter",
                     "email": "BackEndTea@gmail.com"
                 },
                 {
                     "name": "Symfony Community",
                     "homepage": "https://symfony.com/contributors"
+=======
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                },
+                {
+                    "name": "Gert de Pagter",
+                    "email": "BackEndTea@gmail.com"
+>>>>>>> Restore lock-file
                 }
             ],
             "description": "Symfony polyfill for ctype functions",
@@ -2408,6 +2721,7 @@
                 "polyfill",
                 "portable"
             ],
+<<<<<<< HEAD
             "time": "2019-08-06T08:03:45+00:00"
         },
         {
@@ -2422,6 +2736,22 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/b42a2f66e8f1b15ccf25652c3424265923eb4f17",
                 "reference": "b42a2f66e8f1b15ccf25652c3424265923eb4f17",
+=======
+            "time": "2019-02-06T07:57:58+00:00"
+        },
+        {
+            "name": "symfony/polyfill-mbstring",
+            "version": "v1.11.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-mbstring.git",
+                "reference": "fe5e94c604826c35a32fa832f35bd036b6799609"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/fe5e94c604826c35a32fa832f35bd036b6799609",
+                "reference": "fe5e94c604826c35a32fa832f35bd036b6799609",
+>>>>>>> Restore lock-file
                 "shasum": ""
             },
             "require": {
@@ -2433,7 +2763,11 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
+<<<<<<< HEAD
                     "dev-master": "1.12-dev"
+=======
+                    "dev-master": "1.11-dev"
+>>>>>>> Restore lock-file
                 }
             },
             "autoload": {
@@ -2467,6 +2801,7 @@
                 "portable",
                 "shim"
             ],
+<<<<<<< HEAD
             "time": "2019-08-06T08:03:45+00:00"
         },
         {
@@ -2481,6 +2816,22 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/polyfill-php70/zipball/54b4c428a0054e254223797d2713c31e08610831",
                 "reference": "54b4c428a0054e254223797d2713c31e08610831",
+=======
+            "time": "2019-02-06T07:57:58+00:00"
+        },
+        {
+            "name": "symfony/polyfill-php70",
+            "version": "v1.11.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-php70.git",
+                "reference": "bc4858fb611bda58719124ca079baff854149c89"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-php70/zipball/bc4858fb611bda58719124ca079baff854149c89",
+                "reference": "bc4858fb611bda58719124ca079baff854149c89",
+>>>>>>> Restore lock-file
                 "shasum": ""
             },
             "require": {
@@ -2490,7 +2841,11 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
+<<<<<<< HEAD
                     "dev-master": "1.12-dev"
+=======
+                    "dev-master": "1.11-dev"
+>>>>>>> Restore lock-file
                 }
             },
             "autoload": {
@@ -2526,6 +2881,7 @@
                 "portable",
                 "shim"
             ],
+<<<<<<< HEAD
             "time": "2019-08-06T08:03:45+00:00"
         },
         {
@@ -2540,6 +2896,22 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/routing/zipball/8b0faa681c4ee14701e76a7056fef15ac5384163",
                 "reference": "8b0faa681c4ee14701e76a7056fef15ac5384163",
+=======
+            "time": "2019-02-06T07:57:58+00:00"
+        },
+        {
+            "name": "symfony/routing",
+            "version": "v3.4.29",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/routing.git",
+                "reference": "8d804d8a65a26dc9de1aaf2ff3a421e581d050e6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/routing/zipball/8d804d8a65a26dc9de1aaf2ff3a421e581d050e6",
+                "reference": "8d804d8a65a26dc9de1aaf2ff3a421e581d050e6",
+>>>>>>> Restore lock-file
                 "shasum": ""
             },
             "require": {
@@ -2602,6 +2974,7 @@
                 "uri",
                 "url"
             ],
+<<<<<<< HEAD
             "time": "2019-08-26T07:50:50+00:00"
         },
         {
@@ -2616,6 +2989,22 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/yaml/zipball/3dc414b7db30695bae671a1d86013d03f4ae9834",
                 "reference": "3dc414b7db30695bae671a1d86013d03f4ae9834",
+=======
+            "time": "2019-06-26T11:14:13+00:00"
+        },
+        {
+            "name": "symfony/yaml",
+            "version": "v3.4.29",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/yaml.git",
+                "reference": "212a27b731e5bfb735679d1ffaac82bd6a1dc996"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/212a27b731e5bfb735679d1ffaac82bd6a1dc996",
+                "reference": "212a27b731e5bfb735679d1ffaac82bd6a1dc996",
+>>>>>>> Restore lock-file
                 "shasum": ""
             },
             "require": {
@@ -2661,7 +3050,11 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
+<<<<<<< HEAD
             "time": "2019-08-20T13:31:17+00:00"
+=======
+            "time": "2019-03-25T07:48:46+00:00"
+>>>>>>> Restore lock-file
         },
         {
             "name": "twig/extensions",
@@ -2720,6 +3113,7 @@
         },
         {
             "name": "twig/twig",
+<<<<<<< HEAD
             "version": "v1.42.3",
             "source": {
                 "type": "git",
@@ -2734,12 +3128,33 @@
             },
             "require": {
                 "php": ">=5.5.0",
+=======
+            "version": "v1.42.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twigphp/Twig.git",
+                "reference": "21707d6ebd05476854805e4f91b836531941bcd4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/21707d6ebd05476854805e4f91b836531941bcd4",
+                "reference": "21707d6ebd05476854805e4f91b836531941bcd4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0",
+>>>>>>> Restore lock-file
                 "symfony/polyfill-ctype": "^1.8"
             },
             "require-dev": {
                 "psr/container": "^1.0",
+<<<<<<< HEAD
                 "symfony/debug": "^3.4|^4.2",
                 "symfony/phpunit-bridge": "^4.4@dev|^5.0"
+=======
+                "symfony/debug": "^2.7",
+                "symfony/phpunit-bridge": "^3.4.19|^4.1.8|^5.0"
+>>>>>>> Restore lock-file
             },
             "type": "library",
             "extra": {
@@ -2762,6 +3177,7 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
+<<<<<<< HEAD
                     "role": "Lead Developer",
                     "email": "fabien@symfony.com",
                     "homepage": "http://fabien.potencier.org"
@@ -2775,6 +3191,21 @@
                     "name": "Armin Ronacher",
                     "role": "Project Founder",
                     "email": "armin.ronacher@active-4.com"
+=======
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
+                },
+                {
+                    "name": "Armin Ronacher",
+                    "email": "armin.ronacher@active-4.com",
+                    "role": "Project Founder"
+                },
+                {
+                    "name": "Twig Team",
+                    "homepage": "https://twig.symfony.com/contributors",
+                    "role": "Contributors"
+>>>>>>> Restore lock-file
                 }
             ],
             "description": "Twig, the flexible, fast, and secure template language for PHP",
@@ -2782,6 +3213,7 @@
             "keywords": [
                 "templating"
             ],
+<<<<<<< HEAD
             "time": "2019-08-24T12:51:03+00:00"
         },
         {
@@ -2796,6 +3228,22 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/webmozart/assert/zipball/88e6d84706d09a236046d686bbea96f07b3a34f4",
                 "reference": "88e6d84706d09a236046d686bbea96f07b3a34f4",
+=======
+            "time": "2019-06-18T15:35:16+00:00"
+        },
+        {
+            "name": "webmozart/assert",
+            "version": "1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webmozart/assert.git",
+                "reference": "83e253c8e0be5b0257b881e1827274667c5c17a9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webmozart/assert/zipball/83e253c8e0be5b0257b881e1827274667c5c17a9",
+                "reference": "83e253c8e0be5b0257b881e1827274667c5c17a9",
+>>>>>>> Restore lock-file
                 "shasum": ""
             },
             "require": {
@@ -2803,7 +3251,12 @@
                 "symfony/polyfill-ctype": "^1.8"
             },
             "require-dev": {
+<<<<<<< HEAD
                 "phpunit/phpunit": "^4.8.36 || ^7.5.13"
+=======
+                "phpunit/phpunit": "^4.6",
+                "sebastian/version": "^1.0.1"
+>>>>>>> Restore lock-file
             },
             "type": "library",
             "extra": {
@@ -2832,7 +3285,11 @@
                 "check",
                 "validate"
             ],
+<<<<<<< HEAD
             "time": "2019-08-24T08:43:50+00:00"
+=======
+            "time": "2018-12-25T11:19:39+00:00"
+>>>>>>> Restore lock-file
         },
         {
             "name": "whitehat101/apr1-md5",
@@ -2936,6 +3393,7 @@
         },
         {
             "name": "mikey179/vfsstream",
+<<<<<<< HEAD
             "version": "v1.6.7",
             "source": {
                 "type": "git",
@@ -2946,13 +3404,29 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/bovigo/vfsStream/zipball/2b544ac3a21bcc4dde5d90c4ae8d06f4319055fb",
                 "reference": "2b544ac3a21bcc4dde5d90c4ae8d06f4319055fb",
+=======
+            "version": "v1.6.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bovigo/vfsStream.git",
+                "reference": "095238a0711c974ae5b4ebf4c4534a23f3f6c99d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bovigo/vfsStream/zipball/095238a0711c974ae5b4ebf4c4534a23f3f6c99d",
+                "reference": "095238a0711c974ae5b4ebf4c4534a23f3f6c99d",
+>>>>>>> Restore lock-file
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0"
             },
             "require-dev": {
+<<<<<<< HEAD
                 "phpunit/phpunit": "^4.5|^5.0"
+=======
+                "phpunit/phpunit": "~4.5"
+>>>>>>> Restore lock-file
             },
             "type": "library",
             "extra": {
@@ -2972,13 +3446,22 @@
             "authors": [
                 {
                     "name": "Frank Kleine",
+<<<<<<< HEAD
                     "role": "Developer",
                     "homepage": "http://frankkleine.de/"
+=======
+                    "homepage": "http://frankkleine.de/",
+                    "role": "Developer"
+>>>>>>> Restore lock-file
                 }
             ],
             "description": "Virtual file system to mock the real file system in unit tests.",
             "homepage": "http://vfs.bovigo.org/",
+<<<<<<< HEAD
             "time": "2019-08-01T01:38:37+00:00"
+=======
+            "time": "2019-04-08T13:54:32+00:00"
+>>>>>>> Restore lock-file
         },
         {
             "name": "myclabs/deep-copy",
@@ -3284,8 +3767,13 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
+<<<<<<< HEAD
                     "role": "lead",
                     "email": "sb@sebastian-bergmann.de"
+=======
+                    "email": "sb@sebastian-bergmann.de",
+                    "role": "lead"
+>>>>>>> Restore lock-file
                 }
             ],
             "description": "Library that provides collection, processing, and rendering functionality for PHP code coverage information.",
@@ -3332,8 +3820,13 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
+<<<<<<< HEAD
                     "role": "lead",
                     "email": "sb@sebastian-bergmann.de"
+=======
+                    "email": "sb@sebastian-bergmann.de",
+                    "role": "lead"
+>>>>>>> Restore lock-file
                 }
             ],
             "description": "FilterIterator implementation that filters files based on a list of suffixes.",
@@ -3374,8 +3867,13 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
+<<<<<<< HEAD
                     "role": "lead",
                     "email": "sebastian@phpunit.de"
+=======
+                    "email": "sebastian@phpunit.de",
+                    "role": "lead"
+>>>>>>> Restore lock-file
                 }
             ],
             "description": "Simple template engine.",
@@ -3423,8 +3921,13 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
+<<<<<<< HEAD
                     "role": "lead",
                     "email": "sb@sebastian-bergmann.de"
+=======
+                    "email": "sb@sebastian-bergmann.de",
+                    "role": "lead"
+>>>>>>> Restore lock-file
                 }
             ],
             "description": "Utility class for timing",
@@ -3552,8 +4055,13 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
+<<<<<<< HEAD
                     "role": "lead",
                     "email": "sebastian@phpunit.de"
+=======
+                    "email": "sebastian@phpunit.de",
+                    "role": "lead"
+>>>>>>> Restore lock-file
                 }
             ],
             "description": "The PHP Unit Testing framework.",
@@ -4130,8 +4638,13 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
+<<<<<<< HEAD
                     "role": "lead",
                     "email": "sebastian@phpunit.de"
+=======
+                    "email": "sebastian@phpunit.de",
+                    "role": "lead"
+>>>>>>> Restore lock-file
                 }
             ],
             "description": "Library that helps with managing the version number of Git-hosted PHP projects",
