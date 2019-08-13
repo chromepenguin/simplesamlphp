@@ -178,7 +178,7 @@ class LoginController
     public function logout($as)
     {
         $auth = new Auth\Simple($as);
-        return new RunnableResponse([$auth, 'logout'], [$this->config->getBasePath().'logout.php']);
+        return new RunnableResponse([$auth, 'logout'], [$this->config->getBasePath().'core/logout/'.urlencode($as)]);
     }
 
 
