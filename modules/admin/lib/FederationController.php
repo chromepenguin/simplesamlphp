@@ -59,7 +59,7 @@ class FederationController
      *
      * @return \SimpleSAML\XHTML\Template
      * @throws \SimpleSAML\Error\Exception
-     * @throws \SimpleSAML_Error_Exception
+     * @throws \SimpleSAML\Error\Exception
      */
     public function main()
     {
@@ -118,7 +118,8 @@ class FederationController
                     } elseif (isset($entity[$old]['en'])) {
                         $entries['remote'][$key][$entityid][$new] = $entity[$old]['en'];
                     } elseif (isset($entries['remote'][$key][$entityid][$old])) {
-                        $entries['remote'][$key][$entityid][$new] = $entries['remote'][$key][$entityid][$old];
+                        $old_entry = $entries['remote'][$key][$entityid][$old];
+                        $entries['remote'][$key][$entityid][$new] = is_array($old_entry) ? $entityid : $old_entry;
                     }
                 }
             }

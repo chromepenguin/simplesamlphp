@@ -32,7 +32,6 @@ class Session implements \Serializable, Utils\ClearableState
      */
     const DATA_TIMEOUT_SESSION_END = 'sessionEndTimeout';
 
-
     /**
      * The list of loaded session objects.
      *
@@ -42,13 +41,12 @@ class Session implements \Serializable, Utils\ClearableState
      */
     private static $sessions = [];
 
-
     /**
      * This variable holds the instance of the session - Singleton approach.
      *
      * Warning: do not set the instance manually, call Session::load() instead.
      */
-    private static $instance = null;
+    private static $instance;
 
     /**
      * The global configuration.
@@ -60,7 +58,7 @@ class Session implements \Serializable, Utils\ClearableState
     /**
      * The session ID of this session.
      *
-     * @var string
+     * @var string|null
      */
     private $sessionId;
 
@@ -160,19 +158,9 @@ class Session implements \Serializable, Utils\ClearableState
 
         if ($transient) {
             // transient session
-            $sh = SessionHandler::getSessionHandler();
             $this->trackid = 'TR'.bin2hex(openssl_random_pseudo_bytes(4));
             Logger::setTrackId($this->trackid);
             $this->transient = true;
-
-            /*
-             * Initialize the session ID. It might be that we have a session cookie but we couldn't load the session.
-             * If that's the case, use that ID. If not, create a new ID.
-             */
-            $this->sessionId = $sh->getCookieSessionId();
-            if ($this->sessionId === null) {
-                $this->sessionId = $sh->newSessionId();
-            }
         } else {
             // regular session
             $sh = SessionHandler::getSessionHandler();
@@ -276,8 +264,8 @@ class Session implements \Serializable, Utils\ClearableState
              * session here. Therefore, use just a transient session and throw the exception for someone else to handle
              * it.
              */
-            Logger::error('Error loading session: '.$e->getMessage());
             self::useTransientSession();
+            Logger::error('Error loading session: '.$e->getMessage());
             if ($e instanceof Error\Exception) {
                 $cause = $e->getCause();
                 if ($cause instanceof \Exception) {
@@ -321,6 +309,7 @@ class Session implements \Serializable, Utils\ClearableState
         }
 
         // we must have a session now, either regular or transient
+        /** @var \SimpleSAML\Session */
         return self::$instance;
     }
 
@@ -453,6 +442,9 @@ class Session implements \Serializable, Utils\ClearableState
      */
     public function save()
     {
+        // clean out old data
+        $this->expireData();
+
         if (!$this->dirty) {
             // session hasn't changed, don't bother saving it
             return;
@@ -529,7 +521,7 @@ class Session implements \Serializable, Utils\ClearableState
     /**
      * Retrieve the session ID of this session.
      *
-     * @return string  The session ID.
+     * @return string|null  The session ID, or null if this is a transient session.
      */
     public function getSessionId()
     {
@@ -894,9 +886,6 @@ class Session implements \Serializable, Utils\ClearableState
         assert(is_string($id));
         assert(is_int($timeout) || $timeout === null || $timeout === self::DATA_TIMEOUT_SESSION_END);
 
-        // clean out old data
-        $this->expireData();
-
         if ($timeout === null) {
             // use the default timeout
             $timeout = self::$config->getInteger('session.datastore.timeout', null);
@@ -934,9 +923,6 @@ class Session implements \Serializable, Utils\ClearableState
     /**
      * This function removes expired data from the data store.
      *
-     * Note that this function doesn't mark the session object as dirty. This means that
-     * if the only change to the session object is that some data has expired, it will not be
-     * written back to the session store.
      * @return void
      */
     private function expireData()
@@ -952,6 +938,7 @@ class Session implements \Serializable, Utils\ClearableState
 
                 if ($ct > $info['expires']) {
                     unset($typedData[$id]);
+                    $this->markDirty();
                 }
             }
         }
@@ -976,8 +963,6 @@ class Session implements \Serializable, Utils\ClearableState
         if ($id === null) {
             return null;
         }
-
-        $this->expireData();
 
         if (!array_key_exists($type, $this->dataStore)) {
             return null;

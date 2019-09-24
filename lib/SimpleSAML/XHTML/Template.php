@@ -66,6 +66,7 @@ class Template extends Response
      * The twig environment.
      *
      * @var \Twig\Environment
+     * @psalm-suppress PropertyNotSetInConstructor  Remove this annotation in 2.0
      */
     private $twig;
 
@@ -155,6 +156,8 @@ class Template extends Response
 
             $this->twig = $this->setupTwig();
         }
+
+        $this->charset = 'UTF-8';
         parent::__construct();
     }
 
@@ -565,6 +568,7 @@ class Template extends Response
     private function findTemplatePath($template, $throw_exception = true)
     {
         assert(is_string($template));
+        $extensions = ['.tpl.php', '.php'];
 
         list($templateModule, $templateName) = $this->findModuleAndTemplateName($template);
         $templateModule = ($templateModule !== null) ? $templateModule : 'default';
@@ -584,8 +588,11 @@ class Template extends Response
             $filename = $base.$templateName;
         }
 
-        if (file_exists($filename)) {
-            return $filename;
+        $filename = $this->normalizeTemplateName($filename);
+        foreach ($extensions as $extension) {
+            if (file_exists($filename.$extension)) {
+                return $filename.$extension;
+            }
         }
 
         // not found in current theme
@@ -604,8 +611,11 @@ class Template extends Response
             $filename = $base.'/'.$templateName;
         }
 
-        if (file_exists($filename)) {
-            return $filename;
+        $filename = $this->normalizeTemplateName($filename);
+        foreach ($extensions as $extension) {
+            if (file_exists($filename.$extension)) {
+                return $filename.$extension;
+            }
         }
 
         // not found in default template
@@ -764,6 +774,7 @@ class Template extends Response
      * Includes a file relative to the template base directory.
      * This function can be used to include headers and footers etc.
      *
+     * @deprecated This function will be removed in SSP 2.0. Use Twig-templates instead
      * @param string $file
      * @return void
      */

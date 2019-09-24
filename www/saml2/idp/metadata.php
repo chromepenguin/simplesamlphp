@@ -212,9 +212,7 @@ try {
     $metaxml = \SimpleSAML\Metadata\Signer::sign($metaxml, $idpmeta->toArray(), 'SAML 2 IdP');
 
     if (array_key_exists('output', $_GET) && $_GET['output'] == 'xhtml') {
-        $defaultidp = $config->getString('default-saml20-idp', null);
-
-        $t = new \SimpleSAML\XHTML\Template($config, 'saml:metadata.php', 'admin');
+        $t = new \SimpleSAML\XHTML\Template($config, 'metadata.tpl.php', 'admin');
 
         $t->data['clipboard.js'] = true;
         $t->data['available_certs'] = $availableCerts;
@@ -234,7 +232,6 @@ try {
         $t->data['metaurl'] = HTTP::getSelfURLNoQuery();
         $t->data['metadata'] = htmlspecialchars($metaxml);
         $t->data['metadataflat'] = htmlspecialchars($metaflat);
-        $t->data['defaultidp'] = $defaultidp;
         $t->show();
     } else {
         header('Content-Type: application/xml');

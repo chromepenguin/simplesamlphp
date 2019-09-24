@@ -464,12 +464,6 @@ $config = [
     'enable.saml20-idp' => false,
     'enable.shib13-idp' => false,
     'enable.adfs-idp' => false,
-    'enable.wsfed-sp' => false,
-
-    /*
-     * Default IdP for WS-Fed.
-     */
-    'default-wsfed-idp' => 'urn:federation:pingfederate:localhost',
 
     /*
      * Whether SimpleSAMLphp should sign the response or the assertion in SAML 1.1 authentication
@@ -867,6 +861,31 @@ $config = [
      */
     'production' => true,
 
+    /*
+     * SimpleSAMLphp modules can host static resources which are served through PHP.
+     * The serving of the resources can be configured through these settings.
+     */
+    'assets' => [
+        /*
+         * These settings adjust the caching headers that are sent
+         * when serving static resources.
+         */
+        'caching' => [
+            /*
+             * Amount of seconds before the resource should be fetched again
+             */
+            'max_age' => 86400,
+            /*
+             * Calculate a checksum of every file and send it to the browser
+             * This allows the browser to avoid downloading assets again in situations
+             * where the Last-Modified header cannot be trusted,
+             * for example in cluster setups
+             *
+             * Defaults false
+             */
+            'etag' => false,
+        ],
+    ],
 
 
     /*********************

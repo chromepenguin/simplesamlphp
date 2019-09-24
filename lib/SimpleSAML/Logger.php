@@ -13,9 +13,14 @@ namespace SimpleSAML;
 class Logger
 {
     /**
-     * @var \SimpleSAML\Logger\LoggingHandlerInterface|false|null
+     * @var \SimpleSAML\Logger\LoggingHandlerInterface
      */
-    private static $loggingHandler = null;
+    private static $loggingHandler;
+
+    /**
+     * @var bool
+     */
+    private static $initializing = false;
 
     /**
      * @var integer|null
@@ -283,32 +288,45 @@ class Logger
     public static function setTrackId($trackId)
     {
         self::$trackid = $trackId;
+        self::flush();
     }
 
 
     /**
      * Flush any pending log messages to the logging handler.
      *
+     * @return void
+     */
+    public static function flush()
+    {
+        foreach (self::$earlyLog as $msg) {
+            self::log($msg['level'], $msg['string'], $msg['statsLog']);
+        }
+        self::$earlyLog = [];
+    }
+
+
+    /**
+     * Flush any pending deferred logs during shutdown.
+     *
      * This method is intended to be registered as a shutdown handler, so that any pending messages that weren't sent
      * to the logging handler at that point, can still make it. It is therefore not intended to be called manually.
      *
      * @return void
      */
-    public static function flush()
+    public static function shutdown()
     {
-        try {
-            $s = Session::getSessionFromRequest();
-        } catch (\Exception $e) {
-            // loading session failed. We don't care why, at this point we have a transient session, so we use that
-            self::error('Cannot load or create session: '.$e->getMessage());
-            $s = Session::getSessionFromRequest();
+        if (self::$trackid === self::NO_TRACKID) {
+            try {
+                $s = Session::getSessionFromRequest();
+            } catch (\Exception $e) {
+                // loading session failed. We don't care why, at this point we have a transient session, so we use that
+                $s = Session::getSessionFromRequest();
+            }
+            self::$trackid = $s->getTrackID();
         }
-        self::$trackid = $s->getTrackID();
-
         self::$shuttingDown = true;
-        foreach (self::$earlyLog as $msg) {
-            self::log($msg['level'], $msg['string'], $msg['statsLog']);
-        }
+        self::flush();
     }
 
 
@@ -376,21 +394,20 @@ class Logger
 
         // register a shutdown handler if needed
         if (!self::$shutdownRegistered) {
-            register_shutdown_function([self::class, 'flush']);
+            register_shutdown_function([self::class, 'shutdown']);
             self::$shutdownRegistered = true;
         }
     }
 
 
     /**
-     * @param \SimpleSAML\Logger\LoggingHandlerInterface|null $handler
+     * @param string|null $handler
      * @return void
      * @throws \Exception
      */
     private static function createLoggingHandler($handler = null)
     {
-        // set to false to indicate that it is being initialized
-        self::$loggingHandler = false;
+        self::$initializing = true;
 
         // a set of known logging handlers
         $known_handlers = [
@@ -425,11 +442,16 @@ class Logger
             }
             $handler = $known_handlers[$handler];
         }
+
+        /** @var \SimpleSAML\Logger\LoggingHandlerInterface */
         self::$loggingHandler = new $handler($config);
 
         self::$format = $config->getString('logging.format', self::$format);
         self::$loggingHandler->setLogFormat(self::$format);
+
+        self::$initializing = false;
     }
+
 
     /**
      * @param int $level
@@ -439,29 +461,23 @@ class Logger
      */
     private static function log($level, $string, $statsLog = false)
     {
-        if (self::$loggingHandler === false) {
+        if (self::$initializing) {
             // some error occurred while initializing logging
             self::defer($level, $string, $statsLog);
             return;
         } elseif (php_sapi_name() === 'cli' || defined('STDIN')) {
             // we are being executed from the CLI, nowhere to log
-            if (is_null(self::$loggingHandler)) {
-                self::createLoggingHandler('SimpleSAML\Logger\StandardErrorLoggingHandler');
+            if (!isset(self::$loggingHandler)) {
+                self::createLoggingHandler(\SimpleSAML\Logger\StandardErrorLoggingHandler::class);
             }
             $_SERVER['REMOTE_ADDR'] = "CLI";
             if (self::$trackid === self::NO_TRACKID) {
                 self::$trackid = 'CL'.bin2hex(openssl_random_pseudo_bytes(4));
             }
-        } elseif (self::$loggingHandler === null) {
+        } elseif (!isset(self::$loggingHandler)) {
             // Initialize logging
             self::createLoggingHandler();
-
-            if (!empty(self::$earlyLog)) {
-                // output messages which were logged before we properly initialized logging
-                foreach (self::$earlyLog as $msg) {
-                    self::log($msg['level'], $msg['string'], $msg['statsLog']);
-                }
-            }
+            self::flush();
         }
 
         if (self::$captureLog) {

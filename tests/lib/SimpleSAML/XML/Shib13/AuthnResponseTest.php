@@ -6,6 +6,7 @@
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
+ * @deprecated This class will be removed in a future release
  */
 
 
@@ -59,18 +60,6 @@ XML;
      * @return void
      */
     protected function setUp()
-    {
-        $this->xml = new AuthnResponse();
-        $this->xml->setXML(static::XMLDOC);
-    }
-
-
-    /**
-     * @covers \SimpleSAML\XML\Shib13\AuthnResponse::setXML
-     * @test
-     * @return void
-     */
-    public function setXML()
     {
         $this->xml = new AuthnResponse();
         $this->xml->setXML(static::XMLDOC);
